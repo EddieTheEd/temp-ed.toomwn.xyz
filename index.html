@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+
+    img,video {
+      height: 500px;
+      width: auto;
+      visibility: hidden;
+    }
+
+    .words {
+      height: 70px;
+    }
+    
+    html {
+      background-color: #151515;
+    }
+
+    p, h3 {
+      color: #c2c2c2;
+      padding: 1%;
+      margin-top: 0;
+    }
+
+
+    h1 {
+    color: #2F459C;
+    text-align: center;
+    text-decoration: underline;
+    }
+
+    .content {
+      display: block;
+      text-align: center;
+      max-width: 85%;
+      margin: auto;
+      border: #525257da 3px solid;
+      border-radius: 20px;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+
+  </style>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const images = Array.from(document.querySelectorAll('img'));
+  const videos = Array.from(document.querySelectorAll('video'));
+
+  const media = [...images, ...videos];
+  let loaded = 0;
+
+  // Edge case: no media
+  if (media.length === 0) return;
+
+  function mediaLoaded() {
+    loaded++;
+    if (loaded === media.length) {
+      media.forEach(el => {
+        el.style.visibility = 'visible';
+      });
+    }
+  }
+
+  images.forEach(img => {
+    if (img.complete && img.naturalWidth !== 0) {
+      mediaLoaded();
+    } else {
+      img.addEventListener('load', mediaLoaded, { once: true });
+      img.addEventListener('error', mediaLoaded, { once: true });
+    }
+  });
+
+  videos.forEach(video => {
+    if (video.readyState >= 2) {
+      mediaLoaded();
+    } else {
+      video.addEventListener('loadeddata', mediaLoaded, { once: true });
+      video.addEventListener('error', mediaLoaded, { once: true });
+    }
+  });
+});
+</script>
+
+
+
+</head>
+
+<header>
+  
+</header>
+
+<body>
+
+<div class="content">
+<h1>ed.toomwn.xyz</h1>
+
+<div>
+<p>Hi again!</p>
+<p>It's been a while... I've kinda procrastinated Blaze 2. Trust me guys. It's not like I've made nothing. But its still making html files with 0 css. Whoops.</p>
+<p>Any way, at the same time I've also been cooking up something crazy...</p>
+<p><img src="Pre-Blaze%202025%20Wrapped-1.png" alt="200" class="words" /></p>
+<p>I also had an idea - while being kept up at 1am because I scoffed down some chocolates that had caffeine in them - to make a summary of my 2025 via pictures!</p>
+<p>So, here it is below! Enjoy, and hopefully Blaze 2 will be out soon 🙏</p>
+<p><em>-Ed :)</em></p>
+<h3>10/01/25</h3>
+<p><img src="cd7dc47f-bab3-4179-b983-6aa716dafffb.jpg" alt="" /></p>
+<h3>23/01/25</h3>
+<p><img src="Screenshot_20250123_184313_Discord.jpg" alt="" /></p>
+<h3>13/02/25</h3>
+<p><img src="Screenshot_20250213_233507_Discord.jpg" alt="" /></p>
+<h3>18/02/25</h3>
+<p><img src="20250218_113614.jpg" alt="" /></p>
+<h3>27/02/25</h3>
+<p><video src="20250227_121242.mp4" controls />  </video></p>
+<h3>27-28/02/25</h3>
+<p><img src="20250227_231521.jpg" alt="" />
+<img src="20250228_195301.jpg" alt="" /></p>
+<h3>05/03/25</h3>
+<p><img src="20250305_194439.jpg" alt="" /></p>
+<h3>14-15/03/25</h3>
+<p><img src="20250314_093822.jpg" alt="" />
+<img src="20250314_231009.jpg" alt="" />
+<img src="20250315_181851.jpg" alt="" /></p>
+<h3>04-06/04/25</h3>
+<p><img src="20250404_105703.jpg" alt="" />
+<img src="20250404_131721.jpg" alt="" />
+<img src="20250404_133721.jpg" alt="" />
+<img src="20250405_110252.jpg" alt="" />
+<img src="20250405_115408.jpg" alt="" />
+<img src="20250405_152246.jpg" alt="" />
+<img src="20250405_154052.jpg" alt="" />
+<img src="20250405_200621.jpg" alt="" />
+<img src="20250406_145945.jpg" alt="" />
+<img src="20250406_160838.jpg" alt="" /></p>
+<h3>16/04/25</h3>
+<p><img src="IMG-20250416-WA0010.jpeg" alt="" /></p>
+<h3>18/04/25</h3>
+<p><img src="20250418_172247.jpg" alt="" /></p>
+<h3>02/05/25</h3>
+<p><img src="20250502_195935.jpg" alt="" /></p>
+<h3>11/05/25</h3>
+<p><img src="20250511_175410.jpg" alt="" /></p>
+<h3>05/06/25</h3>
+<p><img src="20250605_133813.jpg" alt="" /></p>
+<h3>10-12/06/25</h3>
+<p><img src="20250610_080054.jpg" alt="" />
+<img src="20250610_125827.jpg" alt="" />
+<img src="20250611_115713.jpg" alt="" />
+<img src="20250612_185839.jpg" alt="" /></p>
+<h3>14-17/06/25</h3>
+<p><img src="20250613_165126.jpg" alt="" />
+<img src="20250614_120626.jpg" alt="" />
+<img src="20250615_140606.jpg" alt="" />
+<img src="20250615_143116.jpg" alt="" />
+<img src="20250616_000455.jpg" alt="" />
+<img src="20250616_105319.jpg" alt="" />
+<video src="VID-20250617-WA0045.mp4" controls />  </video>
+<img src="20250616_110829.jpg" alt="" />
+<img src="IMG_0345.jpg" alt="" />
+<img src="IMG_0354.jpg" alt="" />
+<img src="20250616_182128.jpg" alt="" /></p>
+<h3>27/06/25</h3>
+<p><img src="20250627_134146.jpg" alt="" /></p>
+<h3>29/06/25</h3>
+<p><img src="20250629_101530.jpg" alt="" />
+<img src="20250629_103719.jpg" alt="" />
+<img src="20250629_170211.jpg" alt="" />
+<img src="20250629_171554.jpg" alt="" />
+<img src="20250629_190514.jpg" alt="" /></p>
+<h3>02/07/25</h3>
+<p><img src="20250702_110332.jpg" alt="" />
+<img src="20250702_111725.jpg" alt="" />
+<img src="20250702_133825.jpg" alt="" /></p>
+<h3>03/07/25</h3>
+<p><img src="20250703_102427.jpg" alt="" />
+<img src="20250703_123012.jpg" alt="" /></p>
+<h3>05/07/25</h3>
+<p><img src="20250705_102332.jpg" alt="" />
+<img src="IMG_0265.jpg" alt="" />
+<img src="IMG_1164.jpg" alt="" /></p>
+<h3>09/07/25</h3>
+        <p><video src="20250709_112533.mp4" controls /> </video>
+<img src="20250709_115902.jpg" alt="" /></p>
+<h3>23/07/25</h3>
+<p><img src="20250723_151652.jpg" alt="" /></p>
+<h3>01/08/25</h3>
+<p><img src="DSC_0567.jpg" alt="" /></p>
+<h3>08/08/25</h3>
+<p><img src="20250808_194912.jpg" alt="" /></p>
+<h3>24/08/25</h3>
+<p><img src="e28b6499-bf00-4079-bd7a-cd7e00d9449e.jpg" alt="" /></p>
+<h3>08-09/09/25</h3>
+<p><img src="20250908_085715.jpg" alt="" />
+<img src="20250908_193556.jpg" alt="" />
+<img src="Screenshot_20250908_200524_Discord.jpg" alt="" />
+<img src="20250909_194057.jpg" alt="" />
+<img src="IMG_20250911_133955_465.jpg" alt="" />
+<img src="IMG_20250911_133952_321.jpg" alt="" />
+<img src="20250909_203754.jpg" alt="" />
+<video src="VID_20250910_054544_793.mp4" controls /> </video></p>
+<h3>23/09/25</h3>
+<p><img src="20250923_133748.jpg" alt="" /></p>
+<h3>30/09/25</h3>
+<p><img src="20250930_134726.jpg" alt="" /></p>
+<h3>03/10/25</h3>
+<p><img src="20251003_163841.jpg" alt="" /></p>
+<h3>13/10/25</h3>
+<p><img src="20251013_193750.jpg" alt="" /></p>
+<h3>16/10/25</h3>
+<p><img src="20251016_155311.jpg" alt="" /></p>
+<h3>28/10/25</h3>
+<p><img src="20251028_182453.jpg" alt="" /></p>
+<h3>13-14/11/25</h3>
+<p><img src="20251113_111937.jpg" alt="" />
+<img src="IMG_20251114_231414_214.jpg" alt="" /></p>
+<h3>15-17/11/25</h3>
+<p><img src="20251115_102822.jpg" alt="" />
+<img src="20251115_153133.jpg" alt="" />
+<img src="20251115_165719.jpg" alt="" />
+<img src="20251115_173048.jpg" alt="" />
+<img src="20251115_185826.jpg" alt="" />
+<img src="IMG_20251115_195705987_HDR.jpg" alt="" />
+<video src="VID_20251115_190632277.mp4" controls />  </video>
+<img src="20251116_144210.jpg" alt="" />
+<img src="20251116_151030.jpg" alt="" />
+<img src="20251117_093402.jpg" alt="" />
+<img src="20251117_103816.jpg" alt="" />
+<img src="20251117_130847.jpg" alt="" /></p>
+<h3>24-27/11/25</h3>
+<p><img src="20251124_162630.jpg" alt="" />
+<img src="20251125_181521.jpg" alt="" />
+<img src="1d1e74ac-d8b2-4afa-bfcd-9ed7af2db5e9.jpg" alt="" />
+<img src="20251126_184750.jpg" alt="" />
+<img src="20251127_160050.jpg" alt="" />
+<img src="20251127_160100.jpg" alt="" /></p>
+<h3>11/12/25</h3>
+<p><img src="20251211_122325.jpg" alt="" />
+<img src="20251211_141015.jpg" alt="" />
+<img src="20251211_160301.jpg" alt="" /></p>
+<h3>13/12/25</h3>
+<p><img src="IMG-20251213-WA0005.jpg" alt="" /></p>
+<h3>15/12/25</h3>
+<p><img src="20251215_173314_001.jpg" alt="" />
+<img src="20251215_173738.jpg" alt="" /></p>
+<h3>19/12/25</h3>
+<p><img src="20251219_120125.jpg" alt="" /></p>
+<h3>21/12/25</h3>
+<p><img src="20251221_174643.jpg" alt="" />
+<img src="20251221_174429.jpg" alt="" /></p>
+<h3>23/12/25</h3>
+<p><img src="20251223_193711.jpg" alt="" />
+
+<img src="image-1123705803022618_20251230132955.jpg" alt="" /></p>
+<h3>27/12/25</h3>
+<p><img src="20251227_120901.jpg" alt="" />
+<img src="20251227_121740.jpg" alt="" />
+<img src="20251227_123932.jpg" alt="" />
+<img src="image-1230689288921620_20251230132959.jpg" alt="" />
+<img src="605468188_1386493406543609_7651286507692769284_n.jpg" alt="" /></p>
+<h3>BONUS: 01/01/26</h3>
+<p><video src="VID-20260101-WA0007.mp4" controls />  </video></p>
+
+  </div>
+ 
+</div>
+
+</body>
+</html>
+
