@@ -7,7 +7,6 @@
     img,video {
       height: 500px;
       width: auto;
-      visibility: hidden;
     }
 
     .words {
@@ -43,48 +42,6 @@
     }
 
   </style>
-
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const images = Array.from(document.querySelectorAll('img'));
-  const videos = Array.from(document.querySelectorAll('video'));
-
-  const media = [...images, ...videos];
-  let loaded = 0;
-
-  // Edge case: no media
-  if (media.length === 0) return;
-
-  function mediaLoaded() {
-    loaded++;
-    if (loaded === media.length) {
-      media.forEach(el => {
-        el.style.visibility = 'visible';
-      });
-    }
-  }
-
-  images.forEach(img => {
-    if (img.complete && img.naturalWidth !== 0) {
-      mediaLoaded();
-    } else {
-      img.addEventListener('load', mediaLoaded, { once: true });
-      img.addEventListener('error', mediaLoaded, { once: true });
-    }
-  });
-
-  videos.forEach(video => {
-    if (video.readyState >= 2) {
-      mediaLoaded();
-    } else {
-      video.addEventListener('loadeddata', mediaLoaded, { once: true });
-      video.addEventListener('error', mediaLoaded, { once: true });
-    }
-  });
-});
-</script>
-
-
 
 </head>
 
